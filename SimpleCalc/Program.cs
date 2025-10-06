@@ -61,13 +61,13 @@
                 double result; switch (operation)
                 {
                     case "+":
-                        result = firstNumber + secondNumber;
+                        result = MathOperations.Add(firstNumber,secondNumber);
                         break;
                     case "-":
-                        result = firstNumber - secondNumber;
+                        result = MathOperations.Subtract(firstNumber, secondNumber);
                         break;
                     case "*":
-                        result = firstNumber * secondNumber;
+                        result = MathOperations.Multiply(firstNumber, secondNumber);
                         break;
                     case "/":
                         if (secondNumber == 0)
@@ -75,7 +75,7 @@
                             Console.WriteLine("Ошибка: деление на ноль невозможно.");
                             continue;
                         }
-                        result = firstNumber / secondNumber;
+                        result = MathOperations.Divide(firstNumber, secondNumber);
                         break;
                     default:
                         Console.WriteLine("Неизвестная операция.");
